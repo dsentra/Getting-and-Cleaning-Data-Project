@@ -52,4 +52,4 @@ combinedata <- melt(combined, id=c("subjectID","activity"))
 tidy <- dcast(combinedata, subjectID+activity ~ variable, mean)
 
 # write the tidy data set to a file
-write.table(tidy, file = "./tidy.txt")
+write.table(tidy, file = "./tidy.txt", row.name=FALSE)
